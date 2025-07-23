@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Added for better layout control */
+}
+
+body {
+  background: #000000;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+.main {
+  background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_large.jpg);
+  height: 90vh;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box {
+  height: 90vh;
+  width: 100%;
+  opacity: 0.69;
+  position: absolute;
+  top: 0;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  max-width: 81vw;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  height: 102px;
+  position: relative;
+  z-index: 10;
+}
+
+nav img {
+  width: 150px; /* Adjusted for better proportion */
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px; /* Add space between buttons */
+}
+
+.hero {
+  height: calc(100% - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  z-index: 10;
+  gap: 20px; /* This now controls the space between all hero elements */
+  padding: 0 30px;
+  text-align: center; /* Center all text within the hero section */
+}
+
+/* --- FIX IS HERE --- */
+/* Removed the large padding from this rule */
+.hero > :first-child {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.3; /* Use relative line-height */
+}
+
+.hero > :nth-child(2) {
+  font-weight: 400;
+  font-size: 24px; /* Increased size for better hierarchy */
+}
+
+.hero > :nth-child(3) {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.separation {
+  height: 8px; /* Slightly thinner */
+  background: rgb(121, 116, 116);
+  position: relative;
+  z-index: 20;
+}
+
+.btn {
+  padding: 7px 20px;
+  font-weight: 500; /* Adjusted weight */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-red-btn {
+  font-weight: 500;
+  font-size: 24px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: rgb(229, 9, 20);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-red-btn:hover {
+  background-color: rgb(193, 17, 25);
+}
+
+.main input {
+  background-color: rgba(23, 23, 23, 0.7);
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(246, 238, 238, 0.5);
+  color: white;
+  width: 350px;
+}
+.btn-red-sn:hover {
+    background-color: #c61111;
+}
+.btn-red-sn {
+  background: rgb(229, 9, 20);
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row; /* Side-by-side on larger screens */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+
+
+
+
+    nav {
+        max-width: 90vw;
+    }
+    .first {
+        flex-wrap: wrap;
+    }
+    .sec-img img {
+        width: 305px;
+    }
+    .sec-img video {
+        width: 305px;
+
+    }
+
+
+ 
+
+
+
+.search-form {
+    left: -5px;
+}
+
+    .btn-red-sn {
+  font-size: 14px;
+  padding: 5px 30px;
+  left: -4px;
+    }
+
+
+.main input {
+    position: relative;
+    right: 10px;
+}
+
+    
+    .btn-red-btn {
+        right: 11px;
+        position: relative;
+    }
+
+
+.btn {
+    padding: 10px 15px;
+    left: -4px;
+}
+
+
+
+      
+
+
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav img {
+        width: 90px;
+    }
+
+    .btn, .btn-red-sn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    nav .nav-buttons {
+        gap: 6px;
+    }
+}
+
+
+
+  .hero > :first-child {
+    font-size: 32px;
+  }
+  .hero > :nth-child(2) {
+    font-size: 18px;
+  }
+  .hero > :nth-child(3) {
+    font-size: 16px;
+  }
+  
+
+  .btn-red-btn {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
+  .btn-red-btn:hover {
+    background-color: #c01414;
+  }
+
+
+.first {
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+  margin: auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+}
+.sec-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-img img {
+  width: 100%;
+  max-width: 500px;
+  z-index: 5;
+}
+
+.sec-img video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 73%;
+  height: auto;
+  z-index: 4;
+}
+section.first > div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0; 
+}
+
+.first > div :first-child {
+font-size: 48px;
+font-weight: bolder;
+}
+
+.first > div :nth-child(2) {
+font-size: 24px;
+color: white;
+}
+
+.faq-question {
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: red;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+        }
+        .faq-answer.open {
+            max-height: 1200px; /* A large enough value */
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-icon.open {
+            transform: rotate(45deg);
+        }
+
+
